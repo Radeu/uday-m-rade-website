@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Uday's Lifestyle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      /* body {
+        background: url('/static/Coronado.jpg') no-repeat center center fixed;
+        background-size: cover;
+      } */
+      body {
+        background: url('/static/Coronado.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+
+        .text-justify {
+          text-align: justify;
+        }
+      /* Fancy Button Style */
+      .fancy-btn {
+        display: inline-block;
+        padding: 6px 14px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(45deg, #6a11cb, #2575fc);
+        border: none;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .fancy-btn:hover {
+        background: linear-gradient(45deg, #2575fc, #6a11cb);
+        box-shadow: 0 4px 15px rgba(101, 99, 255, 0.4);
+        transform: translateY(-2px);
+        color: white;
+      }
+
+      /* Optional: remove border & add padding around images */
+      .card-img-top {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* Optional: tweak card layout spacing */
+      .card-body {
+        padding: 1rem 1.2rem;
+      }
+      .custom-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .custom-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background: #0b2e4a;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        margin-top: 40px;
+      }
+
+      .email-btn {
+        background-color: #0b2e4a;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 15px;
+      }
+
+      .email-btn:hover {
+        background-color: #146fa4;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navigation Bar -->
+    {% include 'nav.html' %}
+
+    <div class="container mt-5" style="background-color: rgba(255,255,255,0.8); min-height: 100vh;">
+      <h1 class="text-center mb-4">My Lifestyle</h1>
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      
+    <div class="container mt-5 mb-5">
+
+
+      <div class="row justify-content-center align-items-start">
+        <!-- Left Column: Image -->
+        <div class="col-md-4 text-center">
+          <img class="rounded mb-2" src="/static/Coves.jpg" alt="Lifestyle" style="width: 100%; max-width: 300px; height: auto;">
+          <figcaption class="fst-italic fs-5">Uday Madhukar Rade</figcaption>
+        </div>
+
+        <!-- Right Column: Text -->
+        <div class="col-md-8 text-justify">
+          <p class="fs-5 text-justify">
+            I was born in a small village called Bhadli (Bk), near Jalgaon, Maharashtra. Life was simple and beautiful back then—playing cricket in the fields, exploring nature, and enjoying the calm of village living. Around the age of 9, I started commuting daily to school in Jalgaon, which slowly shifted my rhythm from playful days to a more structured academic life.
+          </p>
+
+          <p class="fs-5 text-justify">
+            At around 16, I moved to Bhopal for my undergraduate studies. That was the real turning point—my first taste of independence. I started making my own decisions, dreaming bigger, and figuring out who I really am.
+          </p>
+
+          <p class="fs-5 text-justify">
+            Eventually, I moved to the U.S. for higher education. The clean air, open spaces, and quality of life here are things I truly appreciate. But no matter where I am, I stay grounded in my values.
+          </p>
+
+          <p class="fs-5 text-justify">
+            I'm an honest and down-to-earth person who values simplicity and authenticity. I enjoy meaningful conversations with close friends but also love spending time alone. I’m an early bird—I like to start my day with some exercise, a refreshing shower, and a bit of quiet reflection.
+          </p>
+
+          <p class="fs-5 text-justify">
+            I’m also passionate about a few things that add color to my life. I love photography and often find joy in capturing everyday moments. Being close to water brings me peace—be it rivers, lakes, or the sea. I care a lot about cleanliness and hygiene, and that’s something I carry into my space and lifestyle.
+          </p>
+
+          <p class="fs-5 text-justify">
+            Fashion is another side of me—I enjoy dressing well and thinking through what I wear. My go-to outfit for going out? A long-sleeved shirt with sleeves rolled up, neatly tucked into trousers or jeans. It's simple, sharp, and just feels right.
+          </p>
+
+          <p class="fs-5 text-justify">
+            This page is a little window into my life—beyond academics and work—just me, as I am.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1 border border-dark border-2">
+      <span class="px-3 fw-bold text-muted">★</span>
+      <hr class="flex-grow-1 border border-dark border-2">
+    </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #fce3ec;">
+            <img src="/static/Lifestyle/Fruits.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body">
+              <h5 class="card-title">Fitness & Health</h5>
+              <p class="card-text">My weekly workout routines and strategies to stay fit and healthy.</p>
+              <a href="/lifestyle/fitness" target="_blank" class="fancy-btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #fce3ed;">
+            <img src="/static/Lifestyle/Walrus.jpg" class="card-img-top rounded-0" alt="Travel">
+            <div class="card-body">
+              <h5 class="card-title">Travel & Exploration</h5>
+              <p class="card-text">Places I’ve explored.</p>
+              <a href="/lifestyle/travel" target="_blank" class="fancy-btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #fce3ed;">
+            <img src="/static/Lifestyle/NobelCourt.jpg" class="card-img-top rounded-0" alt="Travel">
+            <div class="card-body">
+              <h5 class="card-title">Hobbies and Interests</h5>
+              <p class="card-text">Activities I enjoy.</p>
+              <a href="/lifestyle/hobbies" target="_blank" class="fancy-btn">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit and healthy.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+ -->
+
+
+      </div>
+       <div class="d-flex align-items-center my-4">
+         <hr class="flex-grow-1 border border-dark border-2">
+         <span class="px-3 fw-bold text-muted fs-4">Contact Me</span>
+         <hr class="flex-grow-1 border border-dark border-2">
+       </div>
+
+      <div class="text-center">  <!-- Added wrapper div with text-center -->
+        <a class="email-btn d-inline-block" href="mailto:official1206uday@gmail.com">Email Me</a>
+      </div>
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      </div>
+
+      {% include 'footer.html' %}
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-VXbI6nM3l0OaDg8FXkRQ2iNzFZ+5uAoIqjwGKHh6IvhphM4dJ0M2dVfZhMxOY6G2" crossorigin="anonymous"></script>
+
+  </body>
+</html>

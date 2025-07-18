@@ -1,0 +1,90 @@
+{% macro food_ribbon(toggle_id, title, meals_dict) %}
+  <style>
+    .food-ribbon-toggle { display: none; }
+
+    .food-ribbon-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #f27121, #e94057, #8a2387);
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .food-ribbon-label::after {
+      content: '+';
+      font-size: 24px;
+    }
+
+    .food-ribbon-toggle:checked + .food-ribbon-label::after {
+      content: '-';
+    }
+
+    .food-ribbon-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      background: #fffdfb;
+      border: 1px solid #f0dada;
+      border-radius: 0 0 10px 10px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+      padding: 0 20px;
+    }
+
+    .food-ribbon-toggle:checked + .food-ribbon-label + .food-ribbon-content {
+      max-height: 5000px;
+      padding: 20px;
+    }
+
+    .meal-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .meal-heading {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: #c0392b;
+    }
+
+    .meal-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem 1.5rem;
+    }
+
+    .meal-item::before {
+      content: '⬤';
+      color: #ff6347;
+      font-size: 0.7rem;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .meal-item {
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="food-ribbon-toggle">
+  <label for="{{ toggle_id }}" class="food-ribbon-label">{{ title }}</label>
+  <div class="food-ribbon-content">
+    {% for meal, items in meals_dict.items() %}
+      <div class="meal-section">
+        <div class="meal-heading text-center">{{ meal }}</div>
+        <div class="meal-items">
+          {% for item in items %}
+            <div class="meal-item">{{ item }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

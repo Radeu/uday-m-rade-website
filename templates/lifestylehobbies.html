@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hobbies & Interests</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      /* body {
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
+        background-attachment: fixed;
+        background-size: cover;
+      } */
+      body {
+        background: url('/static/Lifestyle/Hobbies/beach-trees.jpg') no-repeat center center fixed;
+        background-size: cover;
+      }
+      h4 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+        .hobby-title-banner {
+          display: inline-block;
+          padding: 10px 25px;
+          background: url('/static/Lifestyle/Hobbies/wood-bg.jpg') center/cover no-repeat;
+          border-radius: 12px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          color: white;
+          font-weight: bold;
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <div style="background-color: rgba(255,255,255,0.8); min-height: 100vh;">
+    <!-- Navigation Bar -->
+    {% include 'nav.html' %}
+      {% from "macros/ribbon_cooking.html" import hobby_gallery_ribbon %}
+      {% from "macros/ribbon_food.html" import food_ribbon %}
+
+    <div class="container mt-5 mb-5">
+
+
+
+        <div class="container mt-5">
+          <h2 class="text-center mb-5">My Hobbies 🎨</h2>
+          
+          <div class="d-flex align-items-center my-4">
+            <hr class="flex-grow-1 border border-dark border-2">
+            <span class="px-3 fw-bold text-muted">★</span>
+            <hr class="flex-grow-1 border border-dark border-2">
+          </div>
+          
+          <div class="container text-center mt-4">
+            <p class="fs-4 fst-italic">
+              "We don't stop playing because we grow old; we grow old because we stop playing."<br>
+              <strong class="text-primary">– George Bernard Shaw</strong>
+            </p>
+
+          </div>
+          <div class="d-flex align-items-center my-4">
+            <hr class="flex-grow-1 border border-dark border-2">
+            <span class="px-3 fw-bold text-muted">★</span>
+            <hr class="flex-grow-1 border border-dark border-2">
+          </div>
+          <!-- Hobby 1 -->
+          <div class="row align-items-center mb-5">
+            <div class="text-center mb-4">
+              <div class="hobby-title-banner">
+                Cricket
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img src="/static/Lifestyle/Hobbies/CricketStadium.jpg" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-md-6">
+              
+              <p class="card-text">
+                Cricket has been a big part of my childhood. I spent countless hours playing the game with friends, and it remains the sport I've engaged with the most. In my younger days, I not only played cricket regularly but also followed it closely on television.
+              </p>
+              <p class="card-text">
+                Although I don't get much time to play nowadays, I still enjoy watching cricket—especially when the Indian national team is playing. Whether it’s a Test match, a T20, or a One Day International, I try my best to follow the games. During major international tournaments like the World Cup or Champions Trophy, watching matches becomes almost unavoidable for me! And when I can’t stream the games live, I make sure to keep checking the scores.
+              </p>
+              <p class="card-text">
+                I’m a huge fan of <strong>Virat Kohli</strong> and <strong>Rohit Sharma</strong>—two of India’s finest batters. Their dedication, skill, and leadership continue to inspire cricket fans like me.
+              </p>
+            </div>
+          </div>
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      </div>
+
+      <!-- Swimming Section -->
+      <div class="container my-5">
+        <!-- Centered Title Banner -->
+        <div class="text-center mb-4">
+          <div class="hobby-title-banner">
+            Swimming
+          </div>
+        </div>
+
+        <!-- Video and Description Side-by-Side -->
+        <div class="row align-items-center">
+          <!-- Video on the Left -->
+          <div class="col-md-6 mb-3 mb-md-0 text-center">
+            <video class="img-fluid rounded shadow-sm" controls>
+              <source src="/static/Lifestyle/Hobbies/Swimming.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Description on the Right -->
+          <div class="col-md-6">
+            <p>
+              I began learning swimming during my bachelor’s and continued it during my master’s. I’ve always been drawn to water — there’s something calming about being near it.
+            </p>
+            <p>
+              Swimming, to me, is more than just a sport. It’s a full-body workout that especially improves breathing through better inhalation and exhalation. It also helps maintain weight and build endurance. That’s why I truly believe swimming is one of the best forms of exercise.
+            </p>
+            <p>
+              Although I never competed professionally, I’ve always enjoyed swimming as a personal sport.
+            </p>
+            <p>
+              The video you see on the left was taken at one of the swimming pools at the University of California, San Diego. I absolutely loved the facilities and the overall experience there.
+            </p>
+            <p><em>Thank you for watching!</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1 border border-dark border-2">
+      <span class="px-3 fw-bold text-muted">★</span>
+      <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      <div class="container my-5">
+        <!-- Centered Title Banner -->
+        <div class="text-center mb-4">
+          <div class="hobby-title-banner">
+            Food and Cooking
+          </div>
+        </div>
+
+        <!-- Video and Description Side-by-Side -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="/static/Lifestyle/Hobbies/Cooking.jpg" class="img-fluid rounded shadow-sm">
+          </div>
+
+          <!-- Description on the Right -->
+          <div class="col-md-6">
+            <p>
+              I’m from <strong>Maharashtra</strong>, a culturally rich state in India, and I’ve always loved cooking and eating <strong>Maharashtrian food</strong>. More specifically, I belong to the <strong>Khandesh region</strong> in northern Maharashtra, which has its own distinct food culture. I enjoy preparing and eating traditional <em>Khandeshi dishes</em>, many of which are known for their bold flavors and generous use of spices. <strong>Mutton curry</strong> is especially popular in Khandesh, and I never miss the chance to enjoy them whenever I visit home.
+            </p>
+            <p>
+              Interestingly, my favorite dish isn't from Maharashtra — it's <strong>Biryani</strong>! While not as popular in my home state, I absolutely love the rich aroma and layered spices of this iconic Indian dish.
+            </p>
+            <p>
+              My love for food goes well beyond regional boundaries. I’m a big fan of <strong>Indian cuisine</strong> in general, but when it comes to international food, <strong>Mexican cuisine</strong> is a close second. I especially enjoy <em>tacos</em> and <em>burritos</em> — but only when they come with a good serving of <strong>salsa</strong>; the dish just feels incomplete without it!
+            </p>
+            <p>
+              I also enjoy <strong>Thai food</strong>, and my go-to order at Thai restaurants is usually <em>Pad Thai</em>, which I find both comforting and flavorful.
+            </p>
+            <p>
+              As for drinks, my absolute favorite is <strong>Indian Masala Chai</strong> — especially <em>Ginger Chai</em>. A day feels incomplete without a hot cup of this spiced tea. It’s more than just a drink to me — it’s a daily ritual.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      {{ hobby_gallery_ribbon("Cooking-gallery", "Dishes I Cooked", Cooking_items) }}
+      {% set meals = {
+        "Breakfast": ["Oats & nuts with milk", "Banana", "Seasonal Fruits","Green Veggie Juice","Pohe & Sheera","Idli & Sambhar/Chutney","Masala Dosa & Sambhar/Chutney","Paratha","Sprouts"],
+        "Lunch/Dinner": ["Poli/Chapati/Roti","Rice","Puri", "Eggplant/Vangyachi Bhaji", "Bhindi", "Chicken Biryani", "Mutton Curry", "Varan Batti/Poli", "Sev Bhaji", "All Khandeshi Curries", "Matar Paneer", "Shahi Paneer",  "Khandeshi Khichdi", "Khandeshi Kadhi","Khandeshi Bharit","All Types of Dal","Zunka","Thecha Dashmi", "Pav Bhaji","Chicken Topped Pizza","Pumpkin Bhaji", "Karela", "Tacos", "Burritos", "Pad Thai","Moong Dal","Chhole","Rajma"
+],
+        "Snacks": [ "Fruits","Vada Pav", "Batata Vada", "Kachori", "Samosa", "Bhaji","Shev","Chivda/Namkeen", "Bhel", "Bhakarwadi", "Dry Kachori", "Spicy Chicken Burger", "Nashville Style Chicken Sandwich", "Chakli","Aloo Patties"],
+        "Beverages": ["Indian Ginger Chai", "Indian Masala Chai", "(South Indian) Filtered Coffee", "Mango Lassi", "Coconut Water","Fruits' Juices","Coke"
+],
+        "Sweets/Desserts": ["Rasmalai", "Ice-cream", "Keshar Peda","Peda","Motichoor Laddu","Jalebi","Kaju Katli","Cake", "Store-made Mithais"]
+        
+      } %}
+      {{ food_ribbon("meal-ribbon", "Favorite Dishes", meals) }}
+
+
+
+      <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1 border border-dark border-2">
+      <span class="px-3 fw-bold text-muted">★</span>
+      <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="text-center mb-4">
+          <div class="hobby-title-banner">
+            Music
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/Lifestyle/Hobbies/Saxophone.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+
+          <p class="card-text">
+            Music plays an important role in my life, especially Bollywood songs. Whenever I’m stressed or working on a task that doesn’t require deep focus, I enjoy playing Bollywood music in the background. It helps me relax and lifts my mood.
+          </p>
+          <p class="card-text">
+            Since childhood, I’ve always wanted to learn a musical instrument. One day, I saw a man playing the saxophone in a movie — eyes closed, fully immersed — and it deeply inspired me. That moment stayed with me, and I eventually purchased an Alto saxophone and began teaching myself using music sheets.
+          </p>
+          <p class="card-text">
+            One of my proudest moments was playing the Indian National Anthem on the saxophone, which I even shared on Facebook. The experience of learning and playing this beautiful instrument has been deeply rewarding.
+          </p>
+          <p class="card-text">
+            I’m also a big fan of <strong>Indian wedding bands</strong> — the kind of lively brass bands that perform during the groom's procession or <em>Baraat</em>. To me, no Indian wedding feels complete without the energetic rhythm and celebratory vibe they bring. The dhol, trumpets, and dancing guests make it an unforgettable experience every time!
+          </p>
+          <div class="col-md-6 mb-3 mb-md-0 text-center">
+            <video class="img-fluid rounded shadow-sm" style="max-width: 70%;" controls>
+              <source src="/static/Lifestyle/Hobbies/AnthemSax.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1 border border-dark border-2">
+      <span class="px-3 fw-bold text-muted">★</span>
+      <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="text-center mb-4">
+          <div class="hobby-title-banner">
+            Gardening
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/Lifestyle/Hobbies/Gardening.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+
+          <p class="card-text">
+            Gardening is something I truly enjoy — especially when it involves aesthetically pleasing plants that bloom with colorful flowers or trees that bear delicious fruits. There’s something deeply satisfying about watching nature thrive through your care.
+          </p>
+          <p class="card-text">
+            I also have a special love for lush green grass. I often imagine that in the future, when I have my own house, it will be surrounded by a variety of plants and trees — whether it's in the backyard, the front yard, or lining the driveway. A green, vibrant, and lively space is definitely part of my dream home.
+          </p>
+          <p class="card-text">
+            In addition to gardening, I also love feeding birds. Especially during summer, I put out rice and branded bird food that contains sunflower seeds, millet, and other grains. A variety of birds — sparrows, red-winged blackbird, northern cardinal, songbird — regularly visit my balcony to enjoy the food. Watching them brings me peace and joy, and I hope to continue this little tradition wherever I live.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1 border border-dark border-2">
+      <span class="px-3 fw-bold text-muted">★</span>
+      <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      <div class="row align-items-center mb-5">
+        <div class="text-center mb-4">
+          <div class="hobby-title-banner">
+            Gym
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/Lifestyle/Hobbies/Gym.jpg" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-md-6">
+
+          <p>
+            I always try to go to the gym for at least 30 to 45 minutes a day. It not only boosts my confidence but also makes me feel healthier and more energetic. Regular workouts help me maintain a strong and masculine physique — something I truly value.
+          </p>
+          <p>
+            On the other hand, when I stop going to the gym, I start losing muscle and feel noticeably skinnier — which you might see in some of the older photos on this website. That physical change also affects how I feel mentally.
+          </p>
+          <p>
+            That’s why I strongly believe that everyone should dedicate at least 30 minutes a day to their body. It's not just about fitness — it’s about feeling good inside and out. Personally, I really enjoy working out, and it's become an important part of my daily routine.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1 border border-dark border-2">
+      <span class="px-3 fw-bold text-muted">★</span>
+      <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      </div>
+      </div>
+    </div>
+
+      
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-VXbI6nM3l0OaDg8FXkRQ2iNzFZ+5uAoIqjwGKHh6IvhphM4dJ0M2dVfZhMxOY6G2" crossorigin="anonymous"></script>
+
+  </body>
+</html>

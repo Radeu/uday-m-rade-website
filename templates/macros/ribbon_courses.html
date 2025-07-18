@@ -1,0 +1,56 @@
+{% macro ribbon(toggle_id, title, items) %}
+  <style>
+    .collapse-toggle { display: none; }
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #001f3f, #39CCCC);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: 1000px;
+      padding: 15px;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 10px 20px;
+    }
+    .course-grid div:nth-child(2n) {
+      color: #333;
+    }
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+  <label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+  <div class="collapse-content">
+    <div class="course-grid">
+      {% for course, dept in items %}
+        <div>{{ course }}</div>
+        <div>{{ dept }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

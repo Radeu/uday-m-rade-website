@@ -1,0 +1,108 @@
+{% macro intern_ribbon(toggle_id, title, projects, show_intro=False) %}
+  <style>
+    .intern-collapse-toggle { display: none; }
+
+    .intern-collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #44475a, #bd93f9);
+      color: white;
+      padding: 25px 30px; /* ↑ increased from 10px 15px */
+      font-weight: bold;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    .intern-collapse-label::after {
+      content: '+';
+      font-size: 40px;
+    }
+
+    .intern-collapse-toggle:checked + .intern-collapse-label::after {
+      content: '-';
+    }
+
+    .intern-collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f2f6f9;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .intern-collapse-toggle:checked + .intern-collapse-label + .intern-collapse-content {
+      max-height: none;
+      padding: 15px;
+    }
+
+    .intern-project-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .intern-project-item img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+    .intern-institution-title {
+      font-size: 25px;
+    }
+    .intern-project-title {
+      color: #6c63ff;
+      font-size: 20px;
+    }
+
+    .intern-skills-label {
+      color: #6c63ff;
+      font-weight: bold;
+    }
+
+    .intern-project-skills {
+      margin-top: -1rem;
+    }
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="intern-collapse-toggle">
+  <label for="{{ toggle_id }}" class="intern-collapse-label">{{ title }}</label>
+  <div class="intern-collapse-content">
+    {% if show_intro %}
+      <p class="fs-6">
+        The internships listed below were undertaken during my academic journey and provided valuable real-world experience across different industries and research domains. At the time, I did not always have a clear understanding of what I wanted to pursue long term, so many of these opportunities were taken as they came, without a specific focus or intent. Nonetheless, each experience contributed to my personal and professional growth in its own way.
+      </p>
+    {% endif %}
+    {% for p in projects %}
+      <div class="intern-project-item">
+        <h5>
+          <span class="intern-institution-title fs-4">{{ p.coursecode }} {{ p.coursename }}</span><br>
+          <span class="intern-project-title fs-4">{{ p.title }}</span>
+        </h5>
+
+
+        <p class="text-muted fst-italic">{{ p.date }}</p>
+        <div style="margin-left: 2rem;">
+          <p class="fs-5">{{ p.description }}</p>
+          <p class="intern-project-skills fs-5">{{ p.skills | safe }}</p>
+        </div>
+        {% if p.image %}
+        <figure style="text-align: center; margin-top: 0.5rem;">
+          <img src="{{ p.image }}" alt="Project image" style="max-width: 200px; height: auto; border-radius: 5px;">
+          {% if p.caption %}
+            <figcaption class="fst-italic" style="font-size: 0.9rem; color: #555;">
+              {{ p.caption }}
+            </figcaption>
+          {% endif %}
+        </figure>
+
+        {% endif %}
+
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

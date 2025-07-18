@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    #LinkedIn {
+    border-radius: 5px;
+    height: 30px
+    }
+    #Facebook {
+    border-radius: 5px;
+    height: 30px
+    }
+  </style>
+  <head>
+    <title>Uday M Rade's Personal Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body style="background-color:#FFFF66;">
+    
+    <nav class="navbar shadow navbar-expand navbar-dark bg-secondary mt-1" aria-label="Second navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/static/home (copy).html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/static/career.html">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Lifestyle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+          <form role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div  class="container">
+      <h1 class="text-center mt-2 mb-2">Welcome to Uday M. Rade's Website!</h1>
+
+      <img class="rounded mx-auto d-block " id = "WelcomePhoto"  src="/static/FBProfilePhoto.jpg" width=300 height=300>
+      <p class="text-center fw-bold fs-5" style="padding: 0px; margin: 0px;"">
+        Uday Madhukar Rade
+      </p>
+      <p class="text-center">
+        Name's Pronunciation: <audio controls style="width: 300px; height: 20px">
+          <source src="/static/UMR.mp3" type="audio/mpeg"></audio>
+      </p>      
+
+      <div class="text-center">
+        <a href="https://www.linkedin.com/in/uday-rade"><img id="LinkedIn" src="/static/linkedinLogo.png" alt="Avatar"></a>
+
+        <a href="https://www.facebook.com/uday.rade.5/"><img id="Facebook" src="/static/fbLogo.png" alt="Avatar"></a>
+      </div>
+      
+
+      <h2 class="mt-2 mb-2">About Website</h2>
+      <p class="lead" id="About">The purpose of this website is to give you an idea of what I did and what I am doing. You will learn about my background, my interests, my hobbies, my education and importantly my professional experience.
+      </p>
+      <div class="text-center">
+        <a class="btn bg-secondary text-white" href="mailto:official1206uday@gmail.com" type="button">Email Me</a>
+      </div>
+      
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>

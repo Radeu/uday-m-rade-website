@@ -1,0 +1,53 @@
+{% macro experience(toggle_id, title, date_range, description, image_path, image_alt) %}
+  <style>
+    .collapse-toggle { display: none; }
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #001f3f, #39CCCC);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      font-size: 20px
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      font-size: 20px
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: 1000px;
+      padding: 15px;
+    }
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+  <label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+  <div class="collapse-content">
+    <p><strong>{{ date_range|safe }}</strong></p>
+    <div class="d-flex align-items-start gap-3 pe-3">
+      <div><p class="fs-5">{{ description }}</p></div>
+      <div class="text-center">
+        <img class="rounded" src="{{ image_path }}" alt="{{ image_alt }}" style="width: 200px; height: auto;">
+        <p class="mt-1 small text-muted">{{ image_alt }}</p>
+      </div>
+    </div>
+
+  </div>
+{% endmacro %}

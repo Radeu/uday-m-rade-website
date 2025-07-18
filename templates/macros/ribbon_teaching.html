@@ -1,0 +1,85 @@
+{% macro teaching_ribbon(toggle_id, title, projects) %}
+  <style>
+    .collapse-toggle { display: none; }
+
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #001f3f, #39CCCC);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f8f9fa;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: 1000px;
+      padding: 15px;
+    }
+
+    .project-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-item img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+
+    }
+    .project-title {
+      color: #00629B;
+    }
+    .skills-label {
+      color: #00629B;
+      font-weight: bold;
+    }
+
+
+
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+  <label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+  <div class="collapse-content">
+    <p>
+      The following teaching assistant positions were instrumental in supporting my educational and living expenses. I am sincerely grateful to the professors who offered me these opportunities.
+    </p>
+    {% for p in projects %}
+      <div class="project-item">
+        <h5>
+          <span class="text-muted">{{ p.coursecode }}</span><br>
+          <span class="project-title">{{ p.coursename }}</span>
+        </h5>
+
+        <div style="margin-left: 2rem;">
+          <p class="fs-5">{{ p.description }}</p>
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

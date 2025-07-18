@@ -1,0 +1,95 @@
+{% macro project_ribbon(toggle_id, title, projects, show_intro=False) %}
+  <style>
+    .collapse-toggle { display: none; }
+
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #001f3f, #39CCCC);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f8f9fa;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: none;
+      padding: 15px;
+    }
+
+    .project-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-item img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+
+    }
+    .project-title {
+      color: #00629B;
+    }
+    .skills-label {
+      color: #00629B;
+      font-weight: bold;
+    }
+    .project-skills {
+      margin-top: -1rem; /* Reduce spacing */
+    }
+
+
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+  <label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+  <div class="collapse-content">
+    {% if show_intro %}
+      <p>
+        The course projects listed here were completed as part of the courses I was enrolled in. Some were personally chosen, while others were assigned by the respective instructors. I have highlighted projects that I dedicated significant time and effort to.
+      </p>
+    {% endif %}
+    {% for p in projects %}
+      <div class="project-item">
+        <h5>
+          <span class="text-muted fs-4">{{ p.coursecode }} {{ p.coursename }}</span><br>
+          <span class="project-title fs-4">{{ p.title }}</span>
+        </h5>
+
+
+        <p class="text-muted fst-italic">{{ p.date }}</p>
+        <div style="margin-left: 2rem;">
+          <p  class="fs-5">{{ p.description }}</p>
+          <p class="project-skills fs-5">{{ p.skills | safe }}</p>
+        </div>
+
+        {% if p.image %}
+          <img src="{{ p.image }}" alt="Project image">
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

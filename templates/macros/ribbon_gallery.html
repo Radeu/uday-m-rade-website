@@ -1,0 +1,82 @@
+{% macro gallery_ribbon(toggle_id, title, items) %}
+  <style>
+    .collapse-toggle { display: none; }
+
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #0b2e4a, #17a2b8);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f8f9fa;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: 2000px;
+      padding: 15px;
+    }
+
+ .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;        /* Fill grid column */
+  height: auto;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  object-fit: cover;
+}
+
+.gallery-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+  </style>
+
+<input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+<label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+<div class="collapse-content">
+  <div class="gallery-grid">
+    {% for item in items %}
+      <div class="gallery-item">
+        <a href="{{ item.image }}" data-lightbox="{{ toggle_id }}-gallery" data-title="{{ item.description }}">
+          <img src="{{ item.image }}" alt="Gallery image">
+        </a>
+        <p class="gallery-description">{{ item.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endmacro %}

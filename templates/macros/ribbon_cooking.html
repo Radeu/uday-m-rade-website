@@ -1,0 +1,81 @@
+
+{% macro hobby_gallery_ribbon(toggle_id, title, image_urls) %}
+  <style>
+    .hobby-gallery-toggle { display: none; }
+
+    .hobby-gallery-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #2A7B9B, #57C785, #EDDD53);
+      color: white;
+      padding: 12px 18px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .hobby-gallery-label::after {
+      content: '+';
+      font-size: 22px;
+    }
+
+    .hobby-gallery-toggle:checked + .hobby-gallery-label::after {
+      content: '-';
+    }
+
+    .hobby-gallery-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #fffaf5;
+      color: #333;
+      border: 1px solid #f0cfcf;
+      border-radius: 0 0 10px 10px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+    }
+
+    .hobby-gallery-toggle:checked + .hobby-gallery-label + .hobby-gallery-content {
+      max-height: 100vh;
+      overflow-y: auto;
+
+      padding: 20px 15px;
+    }
+
+    .hobby-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .hobby-gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .hobby-gallery-item img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="hobby-gallery-toggle">
+  <label for="{{ toggle_id }}" class="hobby-gallery-label">{{ title }}</label>
+  <div class="hobby-gallery-content">
+    <div class="hobby-gallery-grid">
+      {% for img_url in image_urls %}
+        <div class="hobby-gallery-item">
+          <img src="{{ img_url }}" alt="Gallery image">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

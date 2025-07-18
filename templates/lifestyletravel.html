@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Travel and Exploration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      body {
+        background: linear-gradient(to right,#FA6C00, #C79557,#000000);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+        .text-justify {
+          text-align: justify;
+        }
+      /* Fancy Button Style */
+      .fancy-btn {
+        display: inline-block;
+        padding: 6px 14px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+        border: none;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .fancy-btn:hover {
+        background: linear-gradient(45deg, #2575fc, #6a11cb);
+        box-shadow: 0 4px 15px rgba(101, 99, 255, 0.4);
+        transform: translateY(-2px);
+        color: white;
+      }
+
+      /* Optional: remove border & add padding around images */
+      .card-img-top {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* Optional: tweak card layout spacing */
+      .card-body {
+        padding: 1rem 1.2rem;
+      }
+      .custom-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .custom-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Navigation Bar -->
+    {% include 'nav.html' %}
+    <div class="container mt-5 mb-5">
+ 
+
+
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #CBF2F7;">
+            <img src="/static/Lifestyle/Travel/SD1.jpg" class="card-img-top rounded-0" alt="sd1">
+            <div class="card-body">
+              <h5 class="card-title">San Diego</h5>
+              <p class="card-text">CA, USA.</p>
+              <a href="/lifestyle/travel/sandiego" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #CDF9FA;">
+            <img src="/static/Lifestyle/Travel/Chicago1.jpg" class="card-img-top rounded-0" alt="chicago1">
+            <div class="card-body">
+              <h5 class="card-title">Chicago</h5>
+              <p class="card-text">IL, USA.</p>
+              <a href="/lifestyle/travel/chicago" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #B7B4FA;">
+            <img src="/static/Lifestyle/Travel/lax1.jpg" class="card-img-top rounded-0" alt="lax1">
+            <div class="card-body">
+              <h5 class="card-title">Los Angeles</h5>
+              <p class="card-text">CA, USA.</p>
+              <a href="/lifestyle/travel/lax" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #FCD9E0;">
+            <img src="/static/Lifestyle/Travel/sfo1.jpg" class="card-img-top rounded-0" alt="sfo1">
+            <div class="card-body">
+              <h5 class="card-title">San Francisco</h5>
+              <p class="card-text">CA, USA.</p>
+              <a href="/lifestyle/travel/sfo" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #FAD6A5;">
+            <img src="/static/Lifestyle/Travel/Indy1.jpg" class="card-img-top rounded-0" alt="indy1">
+            <div class="card-body">
+              <h5 class="card-title">Indianapolis</h5>
+              <p class="card-text">IN, USA.</p>
+              <a href="/lifestyle/travel/indy" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #FAC3C3;">
+            <img src="/static/Lifestyle/Travel/slc1.jpg" class="card-img-top rounded-0" alt="slc1">
+            <div class="card-body">
+              <h5 class="card-title">Salt Lake City</h5>
+              <p class="card-text">UT, USA.</p>
+              <a href="/lifestyle/travel/slc" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #C3F9FA;">
+            <img src="/static/Lifestyle/Travel/miami1.jpg" class="card-img-top rounded-0" alt="miami1">
+            <div class="card-body">
+              <h5 class="card-title">Miami</h5>
+              <p class="card-text">FL, USA.</p>
+              <a href="/lifestyle/travel/miami" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #F9FAC3;">
+            <img src="/static/Lifestyle/Travel/nyc1.jpg" class="card-img-top rounded-0" alt="nyc1">
+            <div class="card-body">
+              <h5 class="card-title">New York City</h5>
+              <p class="card-text">NY, USA.</p>
+              <a href="/lifestyle/travel/nyc" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #C3FAC5;">
+            <img src="/static/Lifestyle/Travel/agra1.jpg" class="card-img-top rounded-0" alt="agra1">
+            <div class="card-body">
+              <h5 class="card-title">Agra</h5>
+              <p class="card-text">UP, India</p>
+              <a href="/lifestyle/travel/agra" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #F0B4E9;">
+            <img src="/static/Lifestyle/Travel/delhi1.jpg" class="card-img-top rounded-0" alt="delhi1">
+            <div class="card-body">
+              <h5 class="card-title">Delhi</h5>
+              <p class="card-text">India</p>
+              <a href="/lifestyle/travel/delhi" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #B4F0BB;">
+            <img src="/static/Lifestyle/Travel/amritsar1.jpg" class="card-img-top rounded-0" alt="amritsar1">
+            <div class="card-body">
+              <h5 class="card-title">Amritsar</h5>
+              <p class="card-text">Punjab, India</p>
+              <a href="/lifestyle/travel/amritsar" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #B4BEF0;">
+            <img src="/static/Lifestyle/Travel/jandk1.jpg" class="card-img-top rounded-0" alt="jandk1">
+            <div class="card-body">
+              <h5 class="card-title">Jammu & Kashmir</h5>
+              <p class="card-text">India</p>
+              <a href="/lifestyle/travel/jandk" target="_blank" class="fancy-btn">Gallery</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0" style="background-color: #fce3ed;">
+            <img src="/static/Lifestyle/Walrus.jpg" class="card-img-top rounded-0" alt="Travel">
+            <div class="card-body">
+              <h5 class="card-title">Travel & Exploration</h5>
+              <p class="card-text">Places I’ve explored.</p>
+              <a href="/lifestyle/travel" target="_blank" class="fancy-btn">Learn more</a>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit and healthy.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card shadow-sm border-0 mx-auto" style="width: 300px; background-color: #fce3ec;">
+            <img src="/static/Coves.jpg" class="card-img-top rounded-0" alt="Fitness">
+            <div class="card-body p-3" style="padding-bottom: 0 !important;">
+              <h5 class="card-title mb-2">Fitness & Health</h5>
+              <p class="card-text mb-2">My weekly workout routines and strategies to stay fit during grad life.</p>
+              <a href="/lifestyle/fitness" target="_blank"
+               class="fancy-btn d-inline-block mb-2">Learn more</a>
+            </div>
+          </div>
+
+        </div>
+ -->
+
+
+      </div>
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-VXbI6nM3l0OaDg8FXkRQ2iNzFZ+5uAoIqjwGKHh6IvhphM4dJ0M2dVfZhMxOY6G2" crossorigin="anonymous"></script>
+
+  </body>
+</html>

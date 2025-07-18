@@ -1,0 +1,86 @@
+{% macro education_ribbon(toggle_id, title, schools) %}
+  <style>
+    .collapse-toggle { display: none; }
+
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #001f3f, #39CCCC);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f8f9fa;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: 1000px;
+      padding: 15px;
+    }
+
+    .edu-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .edu-title {
+      font-size: 25px;
+      font-weight: bold;
+      color: #00629B;
+    }
+
+    .edu-date {
+      font-size: 18px;
+      color: #6c757d;
+      margin-left: 0.5rem;
+      margin-top: -0.25rem;
+    }
+
+    .edu-sub {
+      font-size: 20px;;
+      margin-top: 0.25rem;
+      margin-left: 1rem;
+    }
+
+    .edu-concentration {
+      font-style: italic;
+      color: #555;
+      margin-left: 1rem;
+    }
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+  <label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+  <div class="collapse-content">
+    {% for school in schools %}
+      <div class="edu-item">
+        <div class="edu-title">{{ school.name }}</div>
+        {% if school.date %}
+          <div class="edu-date">{{ school.date }}</div>
+        {% endif %}
+        <div class="edu-sub">{{ school.degree }}</div>
+        <div class="edu-concentration">{{ school.concentration }}</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endmacro %}

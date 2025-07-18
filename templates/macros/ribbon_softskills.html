@@ -1,0 +1,80 @@
+{% macro softskills_ribbon(toggle_id, title, skills) %}
+  <style>
+    .collapse-toggle { display: none; }
+
+    .collapse-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(0deg, #0b2e4a, #17a2b8);
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .collapse-label::after {
+      content: '+';
+      font-size: 20px;
+    }
+
+    .collapse-toggle:checked + .collapse-label::after {
+      content: '-';
+    }
+
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+      padding: 0 15px;
+      background-color: #f8f9fa;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .collapse-toggle:checked + .collapse-label + .collapse-content {
+      max-height: 500px;
+      padding: 15px;
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .skill-item::before {
+      content: '●'; /* Full dot (U+25CF) looks better than middle dot */
+      color: #0b2e4a;
+      margin-right: 0.5rem;
+      font-size: 0.8rem;
+      display: inline-block;
+      transform: translateY(1px); /* Fine-tune vertical position */
+    }
+
+  </style>
+
+  <input type="checkbox" id="{{ toggle_id }}" class="collapse-toggle">
+  <label for="{{ toggle_id }}" class="collapse-label">{{ title }}</label>
+  <div class="collapse-content">
+
+    <div class="skills-row">
+      {% for skill in skills %}
+        <div class="skill-item">{{ skill }}</div>
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

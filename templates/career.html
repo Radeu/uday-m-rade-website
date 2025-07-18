@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Uday's Career</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+    {% from "macros/ribbon_courses.html" import ribbon %}
+    {% from "macros/ribbon_exp.html" import experience %}
+    {% from "macros/ribbon_projects.html" import project_ribbon %}
+    {% from "macros/ribbon_teaching.html" import teaching_ribbon %}
+    {% from "macros/ribbon_gallery.html" import gallery_ribbon %}
+    {% from "macros/ribbon_skills.html" import skills_ribbon %}
+    {% from "macros/ribbon_softskills.html" import softskills_ribbon %}
+    {% from "macros/ribbon_education.html" import education_ribbon %}
+    {% from "macros/ribbon_intern.html" import intern_ribbon %}
+
+
+    <style>
+
+      #LinkedIn {
+        border-radius: 2px;
+        height: 20px;
+      }
+      .text-justify {
+        text-align: justify;
+      }
+      footer {
+        background: #0b2e4a;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        margin-top: 40px;
+      }
+      .email-btn {
+        background-color: #0b2e4a;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 15px;
+      }
+
+      .email-btn:hover {
+        background-color: #146fa4;
+      }
+
+    </style>
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+
+
+
+
+    {% include 'nav.html' %}
+
+    <div class="container">
+      <h1 class="text-center mt-2 mb-2">All about professional experience...</h1>
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      <div class="container text-center mt-4">
+        <p class="fs-4 fst-italic">
+          "So many of our dreams at first seem impossible, then they seem improbable, and then, when we summon the will, they soon become inevitable."<br>
+          <strong class="text-primary">– Christopher Reeve</strong>
+        </p>
+
+      </div>
+
+      
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+
+      <div class="university-highlight my-4 text-center">
+        <h2 class="mb-1">Introduction</h2>
+      </div>
+
+      <div class="d-flex align-items-start gap-3 ps-3">
+        <figure class="mb-0">
+          <img class="rounded" src="/static/LinkedInPhoto.jpg" alt="Professional Photo" style="width: 300px; height: auto;">
+          <figcaption class="text-center fst-italic fs-5">Uday Madhukar Rade</figcaption>
+        </figure>
+
+        <!-- Text Container -->
+        <div>
+          <p class="fs-5 text-justify">
+            &nbsp;&nbsp; I was born and raised in India, where I completed my education through my bachelor's degree. I later moved to the United States to pursue higher education, completing a master’s degree from UC San Diego and currently working toward a Ph.D. in Mechanical Engineering at Purdue University. This will be the final step in my academic journey, after which I intend to transition fully into industry or R&D.
+          </p>
+
+          <p class="fs-5 text-justify">
+            I began my career with a strong focus on experimental work, but over time, I discovered a deep interest in computational modeling and analysis. Today, I consider myself a computational person, working in the field of computational mechanics with hands-on experience in various simulation tools, programming languages and software libraries. I enjoy applying and/or developing computational tools to solve complex, real-world engineering problems, and I’m excited to continue working in this space in an industry setting.
+          </p>
+        </div>
+      </div>
+
+      {{ skills_ribbon("skills_toggle", "Technical Skills", ["Ansys Fluent/Mechanical", "Abaqus", "FEniCS", "Matlab", "Python", "Solidworks", "LaTeX", "Gerris Flow Solver (GFS)", "AVL Boost", "LabVIEW", "HTML", "CSS", "Bootstrap"]) }}
+      
+      {{ softskills_ribbon("softskills_toggle", "Soft Skills", ["Consistency","Punctuality", "Self-motivation", "Hard-working","Optimism", "Problem-solving", "Time management", "Adaptability", "Teamwork","Busy"]) }}
+
+      {{ education_ribbon(
+        "education-toggle",
+        "Education",
+        [
+          {
+            "name": "Purdue University, West Lafayette, Indiana, USA",
+            "degree": "Ph.D. in Mechanical Engineering",
+            "concentration": "Computational Mechanics (Solids, Fluids), Computational Interdisciplinary Graduate Programs (CIGP)",
+            "date": "Jan 2024 – Present"
+          },
+          {
+            "name": "University of California, San Diego, USA",
+            "degree": "M.S. in Chemical Engineering",
+            "concentration": "Fluids, Thermal and Solids",
+            "date": "Sep 2020 – Jun 2022"
+          },
+          {
+            "name": "National Institute of Technology, Bhopal, India",
+            "degree": "B.Tech in Chemical Engineering",
+            "concentration": null,
+            "date": "Jun 2016 – Jun 2020"
+          }
+        ]
+      ) }}
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+      <div class="university-highlight my-4 text-center">
+        <h2 class="mb-1">Purdue University, West Lafayette, Indiana</h2>
+        <p class="fst-italic text-muted">Jan 2024 – Present</p>
+      </div>
+      
+      <div class="d-flex align-items-start gap-3 ps-3">
+        <figure class="mb-0">
+          <img class="rounded" src="/static/PurdueArch.jpg" alt="Purdue University Arch" style="width: 300px; height: auto;">
+          <figcaption class="text-center fst-italic" class="fs-5">Purdue University Arch</figcaption>
+        </figure>
+          <p class="fs-5 text-justify">
+          &nbsp;&nbsp; I am a doctoral (Ph.D.) student in the Department of Mechanical Engineering at Purdue University. My research focuses on the application of computational mechanics. Specifically, I apply and develop computational tools to solve, simulate, and analyze complex problems in mechanical engineering.
+        </p>
+      </div>
+      {{ experience(
+        "purdue-phd-contact",
+        "Graduate Research Assistant (Computational Nonlocal Contact Mechanics)",
+        "Jun 2025 – Present <em>West Lafayette, Indiana, USA</em>",
+        "I am currently working with Professor Marcial Gonzalez in the Department of Mechanical Engineering. Our research investigates the mechanical behavior of deformable spherical particles—idealized as spherical balls—subjected to different loading configurations. Under compression, these particles deform and exert forces on each other, leading to the formation of contact regions characterized by circular contact areas with well-defined radii. We aim to analyze the evolution of contact radius, contact pressure, and contact force as functions of particle deformation, material properties, and various loading configurations. Additionally, our work incorporates the influence of nonlocal interaction effects to more accurately capture the complex mechanics of confined particulate systems.",
+        "/static/Flex.jpg",
+        "My workplace: Flex Lab, Purdue University"
+      ) }}
+      {{ experience(
+        "purdue-phd-fsi",
+        "Graduate Research Assistant (Computational Fluid-Structure Interaction)",
+        "Jan 2024 – May 2025 <em>West Lafayette, Indiana, USA</em>",
+        "In a two-dimensional deformable channel, fluid flow interacts dynamically with the elastic walls, causing them to deform under the influence of pressure. This deformation, in turn, alters the pressure distribution along the channel, making it deviate from the linear trend observed in rigid-walled systems. Curious to explore how this behavior unfolds under oscillatory flow conditions, I carried out unsteady simulations using the FEniCS software framework, employing an Arbitrary Lagrangian-Eulerian (ALE) approach to fluid–structure interaction (FSI). These simulations yielded detailed finite element solutions for the fluid velocity, pressure, and wall displacement. To validate the results, I compared the numerical predictions with theoretical expectations—and found a strong agreement, confirming the accuracy and robustness of the model.",
+      "/static/Flex.jpg",
+      "My workplace: Flex Lab, Purdue University"
+      ) }}
+
+      
+      {{ ribbon(
+        "purdue-courses-toggle",
+        "Courses",
+        [
+          ("Solid Mechanics, ME-597", "Mechanical Engineering"),
+          ("Finite Elements in Elasticity, CE-595", "Civil Engineering"),
+          ("Continuum Mechanics, ME-612", "Mechanical Engineering"),
+          ("AI & ML, ECE-570", "Electrical and Computer Engineering"),
+          ("Numerical Methods in Mechanical Engineering, ME-581", "Mechanical Engineering"),
+          ("Intermediate Fluid Mechanics, ME-509", "Mechanical Engineering"),
+          ("Advanced Mathematics For Engineers And Physicists, MA-527", "Mathematics")
+        ]
+      ) }}
+
+      {{ project_ribbon(
+        "purdue-course-projects",
+        "Course Projects",
+        [
+          {
+            "coursecode": "CE 595",
+            "coursename": "Finite Elements in Elasticity",
+
+            "title": "Finite Element Simulation of Traumatic Head Injuries from Ground Impacts
+using Abaqus/Explicit",
+            "date": null,
+            "description": "This project involves simulating human head injuries resulting from ground impacts using finite element (FE) analysis in Abaqus/Explicit. Inspired by prior research, the study develops simplified yet progressively complex anatomical models of the human head—including skull, brain, cerebrospinal fluid, and skin—to investigate stress distribution during impact events.
+
+      The goal is to identify the minimum impact speed and contact angle that lead to skull fracture, defined by a von Mises stress threshold of 35 MPa. The simulations examine how variations in impact velocity and contact angle influence contact forces and stress propagation within the skull. Through this work, we demonstrate how computational modeling can serve as a cost-effective and ethical alternative to physical crash testing, providing valuable insights for forensic investigations, injury prevention, and safety design in automotive scenarios.
+      ",
+            "skills": "<strong class='skills-label'>Skills:</strong> Abaqus, CAD",
+            "image": null
+          }
+        ], show_intro=True)}}
+
+      {{ teaching_ribbon(
+        "purdue-teaching",
+        "Teaching",
+        [
+          {
+            "coursecode": "ME-274 (Spring 2024)",
+            "coursename": "Basic Mechanics (UG level)",
+
+            "title": null,
+            "description": "I graded students' assignments and advised them by conducting weekly office hours."
+          },
+      {
+        "coursecode": "ME-509 (Spring 2025)",
+        "coursename": "Intermediate Fluid Mechanics (Grad level)",
+
+        "description": "I graded students' assignments and advised them by answering questions posted on the discussion forum."
+      }])}}
+      
+      {{ gallery_ribbon(
+        "gallery-purdue",
+        "Gallery",
+        [
+      {
+        "image": "/static//PurdueGallery/APS.jpg",
+        "description": "At APS 2024 Conference, Salt lake City, Utah."
+      }
+        ]
+      ) }}
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      
+      <div class="university-highlight my-4 text-center">
+        <h2 class="mb-1">Cummins Inc., Columbus, Indiana</h2>
+        <p class="fst-italic text-muted">Sep 2022 – Mar 2023</p>
+      </div>
+
+
+      <div class="d-flex align-items-start gap-3 ps-3">
+        <figure class="mb-0">
+          <img class="rounded" src="/static/TruckExhaust.jpg" alt="A truck exhaust pipe" style="width: 300px; height: auto;">
+          <figcaption class="text-center fst-italic" class="fs-5">Truck's exhaust pipe</figcaption>
+        </figure>
+        <p class="fs-5 text-justify">
+          &nbsp;&nbsp; I was employed by Cummins as a Simulation Engineer (Contractor) in the division that dealt with the combustion engine's aftertreatment system. 
+          The engine emits a variety of gases once the fuel is burned, including CO, CO<sub>2</sub>, NO, NO<sub>x</sub>, and others. 
+          Before being released into the atmosphere, these gases need to undergo treatment in the aftertreatment system. 
+          The main goal of my work was to use AVL Boost to run 1D simulations of the system. I made a suggestion on the 
+          choice of technology and catalyst size after examining the simulation results.
+        </p>
+      </div>
+      
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+
+
+      <div class="university-highlight my-4 text-center">
+        <h2 class="mb-1">University of California, San Diego</h2>
+        <p class="fst-italic text-muted">Sep '20 – Jun '22</p>
+      </div>
+
+      <div class="d-flex align-items-start gap-3 ps-3">
+        <figure class="mb-0">
+          <img class="rounded" src="/static/Giesel.jpg" alt="Giesel Library" style="width: 300px; height: auto;">
+          <figcaption class="text-center fst-italic" class="fs-5">Giesel Library, UCSD</figcaption>
+        </figure>
+        <p class="fs-5 text-justify">
+          &nbsp;&nbsp; I greatly enjoyed my time at the University of California, San Diego, where I earned my M.S. in Chemical Engineering. While my degree was in chemical engineering, most of my coursework was actually in mechanical engineering, with a strong focus on computational mechanics—particularly CFD and FEA. I even completed my research work within the Mechanical Engineering department. Beyond academics, life in San Diego was vibrant and fulfilling. I cherished the beautiful coastal weather, spent time with friends at the beach, explored scenic hiking trails, and took full advantage of the city’s many recreational offerings. It was truly a memorable chapter of my academic and personal journey.
+        </p>
+      </div>
+
+
+
+      
+      {{ experience(
+        "ucsd-toggle",
+        "Graduate Research Assistant, Mechanical Engineering",
+        "Jun '21 - Jan '22 <em>San Diego, California, USA</em>",
+        "When a droplet strikes a stationary liquid film, the impact sets off a complex interplay of forces, causing both the droplet and the film to deform. During this brief yet dynamic interaction, various forms of energy are exchanged and transformed. For instance, the droplet’s initial kinetic energy is transferred to the film, initiating waves and deformation. To capture the details of this phenomenon, I performed unsteady three-dimensional simulations using the Gerris Flow Solver (GFS), employing the Volume of Fluid (VoF) method to track the evolving fluid interfaces. Through these simulations, I was able to examine how key properties—such as kinetic energy, surface energy, total viscous dissipation, and vorticity—evolve over time in both the droplet and the film. This analysis provided deeper insights into the fluid dynamics governing droplet–film interactions.",
+        "/static/DropletImpact.jpg",
+        "Droplet Impact"
+      ) }}
+
+
+
+      {{ ribbon(
+        "ucsd-courses-toggle",
+        "Courses",
+        [
+          ("Computational Fluid Dynamics, MAE-290C", "Mechanical & Aerospace Engineering"),
+          ("FEA for Coupled Problems, MAE-207", "Mechanical & Aerospace Engineering"),
+          ("Foundations of Solid Mechanics, SE-271", "Structural Engineering"),
+          ("Turbulence and Mixing, MAE-214A", "Mechanical & Aerospace Engineering"),
+          ("Numerical Methods, MAE-290B", "Mechanical & Aerospace Engineering"),
+          ("CAD and Analysis, MAE-292", "Mechanical & Aerospace Engineering"),
+          ("Multiphase Flows and Heat Transfer, MAE-207", "Mechanical & Aerospace Engineering"),
+          ("Heat Transfer, CENG-221A", "Chemical Engineering"),
+          ("Fluid Mechanics, CENG-210A", "Chemical Engineering"),
+          ("Thermodynamics, CENG-251", "Chemical Engineering"),
+          ("Mass Transfer, CENG-221B", "Chemical Engineering"),
+          ("Chemical Reaction Engineering, CENG-252", "Chemical Engineering"),
+          ("Nanosensors, NANO-262", "Nanoengineering")
+        ]
+      ) }}
+
+
+
+      {{ project_ribbon(
+        "course-projects-toggle",
+        "Course Projects",
+        [
+          {
+            "coursecode": "MAE-290C",
+            "coursename": "Computational Fuid Dynamics",
+      
+            "title": "Redesigning the Orifice Meter: A CFD Study to Mitigate Sedimentation Using an Eccentric Plate",
+            "date": null,
+            "description": "To tackle sedimentation issues in orifice meters, I proposed a modified design featuring an eccentric plate placed over a concentric one. Using a steady-state pressure-based solver and the k-ω SST turbulence model in Ansys Fluent, I simulated the flow through this configuration to observe its impact on flow separation. Numerical streamlines were analyzed to identify regions of recirculation and stagnation, which are typically responsible for sediment buildup. The modified design showed reduced separation zones, indicating improved flow characteristics. To validate the simulation, I compared the computed discharge coefficient with standard values, confirming the model’s accuracy and the effectiveness of the proposed geometry.
+",
+            "skills": "<strong class='skills-label'>Skills:</strong> Ansys Fluent",
+            "image": null
+          },
+      {
+                  "coursecode": "MAE-207",
+                  "coursename": "FEA for Coupled Problems",
+
+                  "title": "HVM-Stabilized FEM for Convection-Diffusion Problems",
+                  "date": null,
+                  "description": "To study convection-diffusion heat transfer, I reimplemented the Hughes Variational Multiscale (HVM) stabilized formulation using Python and FEniCS, based on a variational multiscale decomposition approach. The goal was to enhance numerical stability and accuracy in capturing sharp gradients, especially in convection-dominated regimes. I applied this formulation to a model problem defined over the biunit square domain and derived the exact analytical solution for comparison. A detailed convergence study was then conducted to verify the implementation, showing that the stabilized method achieved the expected rates of convergence and accurately captured the solution behavior.
+
+      ",
+                  "skills": "<strong class='skills-label'>Skills:</strong> FEniCS, Python (Programming Language), Finite Element Analysis (FEA)",
+                  "image": null
+                },
+      {
+        "coursecode": "MAE-290B",
+        "coursename": "Numerical Methods",
+
+        "title": "Numerical Solution of 2D Unsteady Heat Equation Using ADI and Thomas Algorithm",
+        "date": null,
+        "description": "To obtain a time-accurate solution of the temperature field in a two-dimensional square domain, I solved the unsteady heat diffusion equation with a forcing term that varies in both space and time. I implemented the Alternating Direction Implicit (ADI) method for time integration and employed the Thomas algorithm to efficiently solve the resulting tridiagonal systems at each step. The entire numerical scheme was coded in MATLAB, ensuring stability and accuracy of the transient solution. Additionally, I conducted a posteriori error analysis for the steady-state case to assess the numerical reliability and understand the behavior of the discretization error across the domain.
+      ",
+        "skills": "<strong class='skills-label'>Skills:</strong> Matlab",
+        "image": null
+      }
+        ], show_intro=True
+      ) }}
+
+      {{ teaching_ribbon(
+        "ucsd-teaching",
+        "Teaching",
+        [
+          {
+            "coursecode": "MAE-131A (Spring 2021)",
+            "coursename": "Solid Mechanics (UG level)",
+
+            "title": null,
+            "description": "I prepared course materials—specifically assignment solutions—and graded students' assignments and exams.
+      "
+          },
+      {
+        "coursecode": "BENG-207 (Fall 2021)",
+        "coursename": "Design and Implementation of Medical Devices (Grad level)",
+
+        "description": "I guided graduate students to design a medical device from brainstorming various ideas to arrive at an innovative medical device solution with high medical necessity.
+      "
+      },
+      {
+        "coursecode": "Physics-2BL (Winter 2022)",
+        "coursename": "Physics Laboratory-Mechanics (UG level)",
+
+        "description": "I mentored students enrolled in the lab course to perform experiments. Also, graded their reports/exams and advised them by conducting weekly office hours."
+      },
+      {
+        "coursecode": "Physics-1BL (Spring 2022)",
+        "coursename": "Physics Laboratory-Electricity and Magnetism (UG level)",
+
+        "description": "I mentored students enrolled in the lab course to perform experiments. Also, graded their reports/exams and advised them by conducting weekly office hours."
+      }
+      ])}}
+
+      {{ gallery_ribbon(
+        "gallery-toggle",
+        "Gallery",
+        [
+      {
+        "image": "/static//UCSDGallery/Giesel.jpg",
+        "description": "Giesel Library, UCSD."
+      },
+      {
+        "image": "/static//UCSDGallery/FoodPantry.jpg",
+        "description": "Grateful to Triton Food Pantry, which provided free weekly food."
+      },
+      {
+        "image": "/static/UCSDGallery/Plot_summary_droplets.jpg",
+        "description": "Summary of a droplet impact on a film."
+      },
+      {
+        "image": "/static/UCSDGallery/EnergyBudget.jpg",
+        "description": "Energy budget involving kinetic energy, surface energy, and total viscous dissipation energy."
+      },
+      {
+        "image": "/static/UCSDGallery/Grad1.png",
+        "description": "Graduation Day."
+      },
+      {
+        "image": "/static/UCSDGallery/Grad2.png",
+        "description": "Graduation Day."
+      },
+      {
+        "image": "/static/UCSDGallery/Grad3.png",
+        "description": "Graduation Day."
+      }
+        ]
+      ) }}
+
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+
+
+
+      <div class="university-highlight my-4 text-center">
+        <h2 class="mb-1">National Institute of Technology, Bhopal, India</h2>
+        <p class="fst-italic text-muted">Jun 2016 – Jun 2020</p>
+      </div>
+
+      <div class="d-flex align-items-start gap-3 ps-3">
+        <figure class="mb-0">
+          <img class="rounded" src="/static/NITB.jpg" alt="NITB" style="width: 300px; height: auto;">
+          <figcaption class="text-center fst-italic" class="fs-5">Entrance Wall of NIT-Bhopal</figcaption>
+        </figure>
+        <p class="fs-5 text-justify">
+          &nbsp;&nbsp; I earned my Bachelor of Technology (B.Tech) degree in Chemical Engineering from the National Institute of Technology, Bhopal (NIT Bhopal), India. My time at NIT Bhopal was a formative and enriching experience. I had the opportunity to work closely with a few dedicated professors who not only guided me through various academic projects but also supported my aspirations by providing strong letters of recommendation for higher studies. Beyond academics, I truly cherished the vibrant hostel life and the serene beauty of Bhopal—often referred to as the "City of Lakes"—which offered a peaceful and inspiring environment for personal and academic growth.
+        </p>
+      </div>
+
+      {{ project_ribbon(
+        "bhopal-projects-toggle",
+        "Projects",
+        [
+          {
+            "coursecode": null,
+            "coursename": null,
+
+            "title": "Silica Extraction from Rice Husk",
+            "date": "July 2019 - Jun 2020",
+            "description": "As part of a team project, I worked on extracting silica from waste rice husk through thermal treatment, followed by filtration, washing, and titration. This hands-on experience exposed me to advanced laboratory equipment and material characterization techniques. Collaborating closely with peers under time constraints, I gained valuable insight into sustainable material processing and the dynamics of a scientific research environment.
+      ",
+      "skills": null,
+      "image": null
+      },
+      {
+        "coursecode": null,
+        "coursename": null,
+
+        "title": "Hydrogel: Preparation, Characterization, and Application",
+        "date": "Aug 2019 - Dec 2019",
+        "description": "I independently developed an environmentally friendly hydrogel using starch and acrylonitrile as the monomer, aiming for sustainable agricultural applications. The formulation resulted in a high-yield hydrogel, which was then tested on various plant samples. I also performed surface characterization to study the hydrogel’s morphology and better understand its interaction with soil and water.
+      ",
+      "skills": null,
+      "image": null
+      }
+      ])}}
+      
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      
+      {{ intern_ribbon(
+        "internships",
+        "UG Internships",
+        [         {
+            "coursecode": "IISER, Bhopal, India",
+            "coursename": null,
+
+            "title": "Synthesis of MoS₂-PVA Nanocomposites",
+            "date": "Dec 2019",
+            "description": "As part of this short internship, I worked on synthesizing polymer-based nanocomposites by combining polyvinyl alcohol (PVA) with molybdenum disulfide (MoS₂) in varying weight ratios. The goal was to explore how composition affected the structural and mechanical properties of the resulting materials. I collaborated closely with my peers and mentors to characterize these nanocomposites using advanced techniques such as X-ray Diffraction (XRD), Transmission Electron Microscopy (TEM), Scanning Electron Microscopy (SEM), and Universal Testing Machines (UTM). This experience gave me hands-on exposure to material synthesis and multi-instrument analysis, strengthening my interest in materials research and lab-based experimentation.
+      ",
+            "skills": null,
+            "image": "/static/InternGallery/Film.jpg",
+            "caption": "The film of MoS₂-PVA nanocomposite"
+          },
+      {
+            "coursecode": "Indian Institute of Technology, Madras, India",
+            "coursename": null,
+
+            "title": "Leak Detection in a Water Distribution Network without a Hydraulic Model",
+            "date": "May 2019 - Jul 2019",
+            "description": "During this internship, I worked under the mentorship of Mr. Prasanna Mohandoss and collaborated with Professor Sridharakumar Narasimhan on identifying leaks in Intermittent Water Distribution Networks. My work focused on locating points of leakage to reduce unnecessary water and energy loss, without relying on a hydraulic model. I implemented a repeated graph partitioning algorithm and applied volume balance techniques, while also improving my skills in MATLAB, LabVIEW, and Excel through data analysis tasks. Beyond the technical work, the experience in Chennai was personally memorable—I thoroughly enjoyed the beachside atmosphere and explored several scenic spots nearby. It was also my first time trying ripe jackfruit, which I quickly grew fond of. I made new friends along the way, making this internship both professionally rewarding and personally enriching.
+      ",
+            "skills": "<strong class='skills-label'>Skills:</strong> LabVIEW, Matlab, Microsoft Excel",
+            "image": "/static/InternGallery/WDN.jpg",
+            "caption": "Graphical View of Water Distribution Network"
+          },
+          {
+            "coursecode": "Orient Cement, Jalgaon, MH, India",
+            "coursename": null,
+
+            "title": "Cement Manufacturing",
+            "date": "May 2018 - Jun 2018",
+            "description": " During the second year of my undergraduate studies, I was introduced to the theoretical aspects of cement production through coursework. Curious to see how these concepts translated into real-world operations, I decided to pursue this internship. While working in the mechanical engineering department of the cement plant, I gained hands-on exposure to various manufacturing and packaging processes, observed the operation of tools and equipment involved in cement production, and developed proficiency in standard testing methods for material analysis. I also assisted my mentor in routine inspections and quality assessments, which helped bridge the gap between textbook knowledge and industrial practice.
+      ",
+            "skills": null,
+            "image": "/static/InternGallery/BallMill.jpg",
+            "caption": "Ball Mill in the Cement Plant"
+          }
+        ], show_intro=True)}}
+
+
+      <div class="d-flex align-items-center my-4">
+        <hr class="flex-grow-1 border border-dark border-2">
+        <span class="px-3 fw-bold text-muted">★</span>
+        <hr class="flex-grow-1 border border-dark border-2">
+      </div>
+      
+      </div> <!-- Close any open containers -->
+   <div class="d-flex align-items-center my-4">
+     <hr class="flex-grow-1 border border-dark border-2">
+     <span class="px-3 fw-bold text-muted fs-4">Contact Me</span>
+     <hr class="flex-grow-1 border border-dark border-2">
+   </div>
+
+  <div class="text-center">  <!-- Added wrapper div with text-center -->
+    <a class="email-btn d-inline-block" href="mailto:official1206uday@gmail.com">Email Me</a>
+  </div>
+  <div class="d-flex align-items-center my-4">
+    <hr class="flex-grow-1 border border-dark border-2">
+    <span class="px-3 fw-bold text-muted">★</span>
+    <hr class="flex-grow-1 border border-dark border-2">
+  </div>
+  
+      {% include 'footer.html' %}
+
+
+
+  </body>
+
+</html>

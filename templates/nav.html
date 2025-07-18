@@ -1,0 +1,51 @@
+<!-- Frosted Glass Full-Width Navbar for Light Backgrounds -->
+<style>
+  .fancy-glass-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7); /* lighter glass */
+    padding: 0.75rem 0;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .fancy-glass-nav a {
+    flex: 1;
+    text-align: center;
+    color: #333; /* dark text for visibility */
+    font-weight: 500;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .fancy-glass-nav a:last-child {
+    border-right: none;
+  }
+
+  .fancy-glass-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .fancy-glass-nav .active {
+    background-color: #333;
+    color: white !important;
+    font-weight: bold;
+    box-shadow: inset 0 -3px 0 #222;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+  }
+</style>
+
+<div class="fancy-glass-nav">
+  <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+  <a href="/career" class="{% if request.path.startswith('/career') %}active{% endif %}">Career</a>
+  <a href="/lifestyle" class="{% if request.path.startswith('/lifestyle') %}active{% endif %}">Lifestyle</a>
+</div>
