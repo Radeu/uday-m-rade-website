@@ -87,14 +87,14 @@
         <h2 class="mb-1">Introduction</h2>
       </div>
 
-      <div class="d-flex align-items-start gap-3 ps-3">
-        <figure class="mb-0">
-          <img class="rounded" src="/static/LinkedInPhoto.jpg" alt="Professional Photo" style="width: 300px; height: auto;">
-          <figcaption class="text-center fst-italic fs-5">Uday Madhukar Rade</figcaption>
-        </figure>
+      <div class="row justify-content-center align-items-start">
+        <div class="col-md-4 text-center">
+          <img class="rounded mb-2" src="/static/LinkedInPhoto.jpg" alt="Professional Photo" style="width: 100%; max-width: 300px; height: auto;">
+          <figcaption class="fst-italic fs-5">Uday Madhukar Rade</figcaption>
+        </div>
 
         <!-- Text Container -->
-        <div>
+        <div class="col-md-8 text-justify">
           <p class="fs-5 text-justify">
             &nbsp;&nbsp; I was born and raised in India, where I completed my education through my bachelor's degree. I later moved to the United States to pursue higher education, completing a master’s degree from UC San Diego and currently working toward a Ph.D. in Mechanical Engineering at Purdue University. This will be the final step in my academic journey, after which I intend to transition fully into industry or R&D.
           </p>
@@ -103,7 +103,7 @@
             I began my career with a strong focus on experimental work, but over time, I discovered a deep interest in computational modeling and analysis. Today, I consider myself a computational person, working in the field of computational mechanics with hands-on experience in various simulation tools, programming languages and software libraries. I enjoy applying and/or developing computational tools to solve complex, real-world engineering problems, and I’m excited to continue working in this space in an industry setting.
           </p>
         </div>
-      </div>
+      
 
       {{ skills_ribbon("skills_toggle", "Technical Skills", ["Ansys Fluent/Mechanical", "Abaqus", "FEniCS", "Matlab", "Python", "Solidworks", "LaTeX", "Gerris Flow Solver (GFS)", "AVL Boost", "LabVIEW", "HTML", "CSS", "Bootstrap"]) }}
       
@@ -139,20 +139,27 @@
         <span class="px-3 fw-bold text-muted">★</span>
         <hr class="flex-grow-1 border border-dark border-2">
       </div>
+ 
 
       <div class="university-highlight my-4 text-center">
         <h2 class="mb-1">Purdue University, West Lafayette, Indiana</h2>
         <p class="fst-italic text-muted">Jan 2024 – Present</p>
       </div>
       
-      <div class="d-flex align-items-start gap-3 ps-3">
-        <figure class="mb-0">
+      <div class="row justify-content-center align-items-start">
+        <div class="col-md-4 text-center">
+          <img class="rounded mb-2" src="/static/PurdueArch.jpg" alt="Purdue University Arch" style="width: 100%; max-width: 300px; height: auto;">
+          <figcaption class="fst-italic fs-5">Purdue University Arch</figcaption>
+        </div>
+        <!-- <figure class="mb-0">
           <img class="rounded" src="/static/PurdueArch.jpg" alt="Purdue University Arch" style="width: 300px; height: auto;">
           <figcaption class="text-center fst-italic" class="fs-5">Purdue University Arch</figcaption>
-        </figure>
+        </figure> -->
+        <div class="col-md-8 text-justify">
           <p class="fs-5 text-justify">
           &nbsp;&nbsp; I am a doctoral (Ph.D.) student in the Department of Mechanical Engineering at Purdue University. My research focuses on the application of computational mechanics. Specifically, I apply and develop computational tools to solve, simulate, and analyze complex problems in mechanical engineering.
         </p>
+          </div>
       </div>
       {{ experience(
         "purdue-phd-contact",
@@ -247,10 +254,17 @@ using Abaqus/Explicit",
 
 
       <div class="d-flex align-items-start gap-3 ps-3">
-        <figure class="mb-0">
+        
+        
+          <div class="col-md-4 text-center">
+            <img class="rounded mb-2" src="/static/TruckExhaust.jpg" alt="A truck exhaust pipe" style="width: 100%; max-width: 300px; height: auto;">
+            <figcaption class="fst-italic fs-5">Truck's exhaust pipe</figcaption>
+          </div>
+        <!-- <figure class="mb-0">
           <img class="rounded" src="/static/TruckExhaust.jpg" alt="A truck exhaust pipe" style="width: 300px; height: auto;">
           <figcaption class="text-center fst-italic" class="fs-5">Truck's exhaust pipe</figcaption>
-        </figure>
+        </figure> -->
+        <div class="col-md-8 text-justify">
         <p class="fs-5 text-justify">
           &nbsp;&nbsp; I was employed by Cummins as a Simulation Engineer (Contractor) in the division that dealt with the combustion engine's aftertreatment system. 
           The engine emits a variety of gases once the fuel is burned, including CO, CO<sub>2</sub>, NO, NO<sub>x</sub>, and others. 
@@ -258,6 +272,7 @@ using Abaqus/Explicit",
           The main goal of my work was to use AVL Boost to run 1D simulations of the system. I made a suggestion on the 
           choice of technology and catalyst size after examining the simulation results.
         </p>
+        </div>
       </div>
       
       <div class="d-flex align-items-center my-4">
@@ -274,13 +289,19 @@ using Abaqus/Explicit",
       </div>
 
       <div class="d-flex align-items-start gap-3 ps-3">
-        <figure class="mb-0">
+        <div class="col-md-4 text-center">
+          <img class="rounded mb-2" src="/static/Giesel.jpg" alt="Giesel Library" style="width: 100%; max-width: 300px; height: auto;">
+          <figcaption class="fst-italic fs-5">Giesel Library, UCSD</figcaption>
+        </div>
+        <!-- <figure class="mb-0">
           <img class="rounded" src="/static/Giesel.jpg" alt="Giesel Library" style="width: 300px; height: auto;">
           <figcaption class="text-center fst-italic" class="fs-5">Giesel Library, UCSD</figcaption>
-        </figure>
+        </figure> -->
+        <div class="col-md-8 text-justify">
         <p class="fs-5 text-justify">
           &nbsp;&nbsp; I greatly enjoyed my time at the University of California, San Diego, where I earned my M.S. in Chemical Engineering. While my degree was in chemical engineering, most of my coursework was actually in mechanical engineering, with a strong focus on computational mechanics—particularly CFD and FEA. I even completed my research work within the Mechanical Engineering department. Beyond academics, life in San Diego was vibrant and fulfilling. I cherished the beautiful coastal weather, spent time with friends at the beach, explored scenic hiking trails, and took full advantage of the city’s many recreational offerings. It was truly a memorable chapter of my academic and personal journey.
         </p>
+        </div>
       </div>
 
 
@@ -443,13 +464,19 @@ using Abaqus/Explicit",
       </div>
 
       <div class="d-flex align-items-start gap-3 ps-3">
-        <figure class="mb-0">
+        <div class="col-md-4 text-center">
+          <img class="rounded mb-2" src="/static/NITB.jpg" alt="NITB" style="width: 100%; max-width: 300px; height: auto;">
+          <figcaption class="fst-italic fs-5">Entrance Wall of NIT-Bhopal</figcaption>
+        </div>
+        <!-- <figure class="mb-0">
           <img class="rounded" src="/static/NITB.jpg" alt="NITB" style="width: 300px; height: auto;">
           <figcaption class="text-center fst-italic" class="fs-5">Entrance Wall of NIT-Bhopal</figcaption>
-        </figure>
+        </figure> -->
+        <div class="col-md-8 text-justify">
         <p class="fs-5 text-justify">
           &nbsp;&nbsp; I earned my Bachelor of Technology (B.Tech) degree in Chemical Engineering from the National Institute of Technology, Bhopal (NIT Bhopal), India. My time at NIT Bhopal was a formative and enriching experience. I had the opportunity to work closely with a few dedicated professors who not only guided me through various academic projects but also supported my aspirations by providing strong letters of recommendation for higher studies. Beyond academics, I truly cherished the vibrant hostel life and the serene beauty of Bhopal—often referred to as the "City of Lakes"—which offered a peaceful and inspiring environment for personal and academic growth.
         </p>
+        </div>
       </div>
 
       {{ project_ribbon(
@@ -535,6 +562,7 @@ using Abaqus/Explicit",
       </div>
       
       </div> <!-- Close any open containers -->
+      </div>
    <div class="d-flex align-items-center my-4">
      <hr class="flex-grow-1 border border-dark border-2">
      <span class="px-3 fw-bold text-muted fs-4">Contact Me</span>
