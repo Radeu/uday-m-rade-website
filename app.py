@@ -43,6 +43,8 @@ def lifestylehobbies():
     image_files = [f for f in os.listdir(folder) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
     image_urls = [url_for('static', filename=f"Lifestyle/Hobbies/Cooking/{img}") for img in image_files]
     return render_template("lifestylehobbies.html", Cooking_items=image_urls, year=datetime.now().year)
-
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
+
+
