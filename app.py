@@ -25,7 +25,7 @@ def lifestyletravel():
     return render_template("lifestyletravel.html", year=datetime.now().year)
 
 # List of valid cities
-travel_cities = ['sandiego', 'chicago', 'lax', 'sfo', 'indy', 'slc','miami','nyc','agra','delhi','amritsar','jandk']
+travel_cities = ['sandiego', 'chicago', 'lax', 'sfo', 'indy', 'slc','miami','nyc','agra','delhi','amritsar','jandk','austin']
 
 @app.route("/lifestyle/travel/<city>")
 def travel_city(city):
